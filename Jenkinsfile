@@ -28,7 +28,7 @@ pipeline{
 		}
 		stage('Ejecucion'){
 			steps{
-				sh '**/target java -jar *.jar'
+				sh 'java -jar **/target/*.jar'
 			}
 		}
 	}
