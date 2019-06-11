@@ -18,7 +18,7 @@ pipeline{
 		}
 		stage('build'){
 			steps{
-				sh 'mvn package'
+				sh 'mvn package -Dmaven.test.skip=true'
 			}
 		}
 		stage('Fin'){
@@ -28,8 +28,8 @@ pipeline{
 		}
 		stage('Ejecucion'){
 			steps{
-				sh 'cd **/target'
-				sh 'java -jar *.jar'
+				sh 'java ´jar *.jar > kkk.out'
+				def out = readFile 'kkk.out'
 			}
 		}
 	}
