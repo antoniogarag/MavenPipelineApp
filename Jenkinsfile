@@ -28,9 +28,7 @@ pipeline{
 		}
 		stage('Ejecucion'){
 			steps{
-				//sh 'java -jar *.jar > kkk.out'
-				//def out = readFile 'kkk.out'
-				def out = sh script: 'java -jar *.jar testing654 n1-standard-8', returnStdout: true
+				sh 'java -jar *.jar'
 			}
 		}
 	}
