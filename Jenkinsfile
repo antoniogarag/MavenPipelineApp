@@ -28,7 +28,7 @@ pipeline{
 		}
 		stage('Ejecucion'){
 			steps{
-				sh 'java -jar *.jar'
+				sh 'java -jar MavenPipelineApp-1.0-SNAPSHOT.jar'
 			}
 		}
 	}
