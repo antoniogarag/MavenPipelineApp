@@ -28,7 +28,7 @@ pipeline{
 		}
 		stage('Ejecucion'){
 			steps{
-				sh 'java ´jar *.jar > kkk.out'
+				sh 'java -jar *.jar > kkk.out'
 				def out = readFile 'kkk.out'
 			}
 		}
